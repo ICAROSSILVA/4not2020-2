@@ -1,4 +1,4 @@
-const controller = require('../controllers/curso') // Os .. serve para subir de nível (ir para pasta back-end)
+const controller = require('../controllers/professor') // Os .. serve para subir de nível (ir para pasta back-end)
 const express = require('express')
 
 const router = express.Router()
