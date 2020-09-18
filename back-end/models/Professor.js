@@ -8,7 +8,7 @@ const esquema = mongoose.Schema({
     cpf: { type: String, required: true, index: { unique: true }},
     rg: { type: String, required: true },
     valor_hora_aula: { type: Number, required: true, min: 15.0, default: 20.75},
-    endereço: { type: String, required: true },
+    endereco: { type: String, required: true },
     telefone: { type: String, required: true },
     // Índice único: impede a duplicidade de CPFs no cadastro
     email: { type: String, required: true, index: { unique: true}}
