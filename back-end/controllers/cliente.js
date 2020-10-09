@@ -30,16 +30,15 @@
 
 // Controller é um conjunto de funções associadas às operações sobre dados
 
-const Turma = require('../models/Turma') // Os .. serve para subir de nível (ir para pasta back-end)
+const Cliente = require('../models/Cliente') // Os .. serve para subir de nível (ir para pasta back-end)
 
 const controller = {} // Objeto vazio
 
 // Operação CREATE, função novo()
 // OBS: Toda vez que tiver 'await' na função, o cabeçalho tem que ser marcado como 'async'
-/*
 controller.novo = async (req, res) => { // req = requisição | res = resposta
     try { // 'try' tenta executar a função e envia um resultado positivo
-        await Turma.create(req.body) // Usa os dados que chega dentro do body da requisição e os envia ao BD para a criação de um novo objeto
+        await Cliente.create(req.body) // Usa os dados que chega dentro do body da requisição e os envia ao BD para a criação de um novo objeto
         // HTTP 201: Created
         res.status(201).end()
     }
@@ -52,11 +51,7 @@ controller.novo = async (req, res) => { // req = requisição | res = resposta
 // Operação RETRIEVE (all), função lista()
 controller.listar = async (req, res) => {
     try{
-        // Traz todos os cursos cadastrados
-        let dados = await Turma.find()
-            .populate('curso', 'nome') // Somente o atributo nome
-            .populate('professor')  // Todos os atributos
-            .populate('sala_aula', 'nome capacidade') // Somente nome e capacidade
+        let dados = await Cliente.find() // Traz todos os cursos cadastrados
         res.send(dados) // Vai com status HTTP 200: OK
     }
     catch(erro) {
@@ -70,7 +65,7 @@ controller.obterUM = async (req, res) => {
    try {
         // Capturando o parâmetro id da URL
         const id = req.params.id
-        let obj = await Turma.findById(id)
+        let obj = await Cliente.findById(id)
 
         // O objeto existe e foi encontrado
         if(obj) res.send(obj) // HTTP 200
@@ -90,7 +85,7 @@ controller.atualizar = async (req, res) => {
         const id = req.body._id
 
         // Busca e substituição do conteúdo do objeto
-        let ret = await Turma.findByIdAndUpdate(id, req.body)
+        let ret = await Cliente.findByIdAndUpdate(id, req.body)
 
         // Se encontrou e atualizou, retornamos HTTP 204: No content
         if(ret) res.status(204).end()
@@ -105,13 +100,13 @@ controller.atualizar = async (req, res) => {
 
 // Operação DELETE, função excluir()
 controller.excluir = async (req, res) => {
-    try { // try significa que em caso de erro ele pula a execução e vai para o catch(), 
-        // se der certo o bloco catch nunca será executado
+    try { /* try significa que em caso de erro ele pula a execução e vai para o catch(), 
+        se der certo o bloco catch nunca será executado */
         // Isolando o id
         const id = req.doby._id
 
         // Busca pelo id e exclusão
-        let ret = await Turma.findByIdAndDelete
+        let ret = await Cliente.findByIdAndDelete
 
         // Encontrou o excluído, HTTP 204: No content
         if(ret) res.status(204).end()
@@ -125,4 +120,3 @@ controller.excluir = async (req, res) => {
 }
 
 module.exports = controller // Sempre é a última linha do código
-*/

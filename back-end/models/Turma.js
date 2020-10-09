@@ -1,3 +1,4 @@
+/*
 const mongoose = require('mongoose')
 
 const esquema = mongoose.Schema({
@@ -17,8 +18,8 @@ const esquema = mongoose.Schema({
         required: true, 
         enum: ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb']
     }],
-    /* Valores que usam apenas a parte de hora de uma data,
-    são manipulados mais facilmente como string */
+    // Valores que usam apenas a parte de hora de uma data,
+    // são manipulados mais facilmente como string
     horario_inicial: { type: String, required: true },
     horario_final: { type: String, required: true },
     curso: { type: mongoose.ObjectId, ref: 'Curso', required: true },

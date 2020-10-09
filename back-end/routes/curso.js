@@ -1,3 +1,4 @@
+/*
 const controller = require('../controllers/curso') // Os .. serve para subir de nível (ir para pasta back-end)
 const express = require('express')
 
@@ -10,3 +11,4 @@ router.put('/', controller.atualizar)
 router.delete('/', controller.excluir)
 
 module.exports = router
+*/

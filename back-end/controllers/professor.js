@@ -30,6 +30,7 @@
 
 // Controller é um conjunto de funções associadas às operações sobre dados
 
+/*
 const Professor = require('../models/Professor') // Os .. serve para subir de nível (ir para pasta back-end)
 
 const controller = {} // Objeto vazio
@@ -100,8 +101,8 @@ controller.atualizar = async (req, res) => {
 
 // Operação DELETE, função excluir()
 controller.excluir = async (req, res) => {
-    try { /* try significa que em caso de erro ele pula a execução e vai para o catch(), 
-        se der certo o bloco catch nunca será executado */
+    try { // try significa que em caso de erro ele pula a execução e vai para o catch(), 
+        // se der certo o bloco catch nunca será executado
         // Isolando o id
         const id = req.doby._id
 
@@ -120,3 +121,4 @@ controller.excluir = async (req, res) => {
 }
 
 module.exports = controller // Sempre é a última linha do código
+*/

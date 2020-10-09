@@ -1,3 +1,4 @@
+/*
 const mongoose = require('mongoose')
 
 const esquema = mongoose.Schema({
@@ -10,7 +11,7 @@ const esquema = mongoose.Schema({
     valor_hora_aula: { type: Number, required: true, min: 15.0, default: 20.75},
     endereco: { type: String, required: true },
     telefone: { type: String, required: true },
-    // Índice único: impede a duplicidade de CPFs no cadastro
+    // Índice único: impede a duplicidade de Emails no cadastro
     email: { type: String, required: true, index: { unique: true}}
 })
 

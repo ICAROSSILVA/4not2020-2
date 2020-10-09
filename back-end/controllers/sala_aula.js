@@ -36,6 +36,7 @@ const controller = {} // Objeto vazio
 
 // Operação CREATE, função novo()
 // OBS: Toda vez que tiver 'await' na função, o cabeçalho tem que ser marcado como 'async'
+/*
 controller.novo = async (req, res) => { // req = requisição | res = resposta
     try { // 'try' tenta executar a função e envia um resultado positivo
         await SalaAula.create(req.body) // Usa os dados que chega dentro do body da requisição e os envia ao BD para a criação de um novo objeto
@@ -100,8 +101,8 @@ controller.atualizar = async (req, res) => {
 
 // Operação DELETE, função excluir()
 controller.excluir = async (req, res) => {
-    try { /* try significa que em caso de erro ele pula a execução e vai para o catch(), 
-        se der certo o bloco catch nunca será executado */
+    try { // try significa que em caso de erro ele pula a execução e vai para o catch(), 
+        // se der certo o bloco catch nunca será executado
         // Isolando o id
         const id = req.doby._id
 
@@ -120,3 +121,4 @@ controller.excluir = async (req, res) => {
 }
 
 module.exports = controller // Sempre é a última linha do código
+*/
